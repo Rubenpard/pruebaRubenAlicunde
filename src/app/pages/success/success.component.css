@@ -1,0 +1,16 @@
+.success-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 80px;
+  }
+
+  h1{
+    color: blue;
+    font-size: 50px;
+  } 
+  

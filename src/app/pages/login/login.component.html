@@ -1,0 +1,36 @@
+<header>
+  <div class="header__center">
+    <img class="header__logo" src="assets/basic.png" alt="Success GIF" />
+    <div class="header__textbox">
+      <p>Prueba <span class="header__textbox--blue">Rubén Martínez</span></p>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="container__title">
+    <h1>{{titular}}</h1> 
+    <p>{{subTitulo}}</p>
+  </div>
+  <div class="login__container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="email"><p>Email:</p></label>
+        <input id="email" formControlName="email" type="email" />
+        <div *ngIf="isEmailInvalid()">
+          <p>Email no válido</p>
+        </div>
+      </div>
+      
+      <div>
+        <label for="password"><p>Contraseña:</p></label>
+        <input id="password" formControlName="password" type="password" />
+        <div *ngIf="isPasswordInvalid()">
+          <p>La contraseña debe tener al menos 6 caracteres.</p>
+        </div>
+      </div>
+      
+      <button type="submit" [disabled]="loginForm.invalid">Enviar</button>
+    </form>
+  </div>
+  </div>
+  
